@@ -1,17 +1,29 @@
 
-/*create universal box CSS characteristics*/
+/*create universal box for general CSS characteristics*/
 .box{
-width:100px;
-height:100px;
 }
 
 /*individual box CSS for control*/
 
-#box1{
+.box1{
+	width:100px;
+	height:100px;
 	background:red;
+	display:inline-block;
 }
 
-#box2{
+.box2{
+	width:100px;
+	height:100px;
 	background:blue;
+	display:inline-block;
 }
 
+
+/*create CSS id state for use in JS game functionality*/
+#on{
+	width:100px;
+	height:100px;
+	background:black;
+
+}
