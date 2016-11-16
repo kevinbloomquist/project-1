@@ -12,15 +12,24 @@ console.log(randomNum);
 
 
 // generate arrays for use in the functionality of game stages
-var callArray = [];
-console.log(callArray);
+var callArray = [1,2,1];
+console.log("callArray "+callArray);
 
 var useArray = [];
-console.log(useArray);
+console.log("useArray " + useArray);
 
 var extendArray = function(callArray) {
-useArray = callArray.push(randomNum);
+	
+console.log(callArray);
+
+callArray.push(randomNum);
+useArray = callArray;
+
+console.log("useArray " + useArray);
+
 };
+
+
 extendArray(callArray);
-console.log(useArray);
+console.log("UseArray "+useArray);
 

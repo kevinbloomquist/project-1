@@ -1,11 +1,13 @@
 
-/*create universal box for general CSS characteristics*/
+/* Currently removed from boxes:create universal box for general CSS characteristics*/
 .box{
+
 }
 
 /*individual box CSS for control*/
 
 .box1{
+	color:white;
 	width:100px;
 	height:100px;
 	background:red;
@@ -13,6 +15,7 @@
 }
 
 .box2{
+	color:white;
 	width:100px;
 	height:100px;
 	background:blue;
