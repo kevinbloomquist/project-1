@@ -1,0 +1,17 @@
+
+/*create universal box CSS characteristics*/
+.box{
+width:100px;
+height:100px;
+}
+
+/*individual box CSS for control*/
+
+#box1{
+	background:red;
+}
+
+#box2{
+	background:blue;
+}
+
