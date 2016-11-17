@@ -27,6 +27,22 @@
 	display:inline-block;
 }
 
+.box3{
+	color:white;
+	width:100px;
+	height:100px;
+	background:green;
+	display:inline-block;
+}
+
+.box4{
+	color:white;
+	width:100px;
+	height:100px;
+	background:purple;
+	display:inline-block;
+}
+
 
 /*create CSS id state for use in JS game functionality*/
 #on{

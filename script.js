@@ -44,16 +44,13 @@ extendArray(callArray);
 console.log("UseArray "+useArray);
 
 // create loop to manage display CSS vaues
-var runVar = useArray.pop();
-
-console.log(runVar);
 
 // turnon...
 // turn off...
 
 var funcLoop = function(useArray) {
 	for (i=0; i<useArray.length; i++) {
-	if (useArray[i]%2 ===0) {
+	if (useArray[i] ===2) {
 // ************************************************************remove below
 
 		/*setTimeout(myFunction,3000);
@@ -62,7 +59,7 @@ var funcLoop = function(useArray) {
     	alert('Hello');
 	}*/
 // *************************************************************remove above
-// pick-up here: added setTimeout, 3000 to working document function to test. turn2on works but turn2off doesn't and delay coordination is off
+// pick-up here: added setTimeout, on and off work. offset timers to better understand...delay coordination is off
 		setTimeout(turn2on,2000);
 
 		function turn2on() {
@@ -77,7 +74,7 @@ var funcLoop = function(useArray) {
 	}
 		// wait...
 		console.log("BOX 2 STUFF!!!");
-	} else if (useArray[i]%2===1) {
+	} else if (useArray[i]===1) {
 
 		setTimeout(turn1on,1000);
 
@@ -92,8 +89,40 @@ var funcLoop = function(useArray) {
 		document.getElementsByClassName("box1")[0].removeAttribute("id");
 	}
 		console.log("BOX 1 STUFF!!!");
+
+	} else if (useArray[i]===3) {
+
+		setTimeout(turn3on,1000);
+
+		function turn3on() {
+		document.getElementsByClassName("box3")[0].setAttribute("id","on");
+
 	}
 		// wait...
+		setTimeout(turn3off,3000);
+
+		function turn3off() {
+		document.getElementsByClassName("box3")[0].removeAttribute("id");
+	}
+		console.log("BOX 3 STUFF!!!");
+		// wait...
+
+	} else if (useArray[i]===4) {
+
+		setTimeout(turn4on,2000);
+
+		function turn4on() {
+		document.getElementsByClassName("box4")[0].setAttribute("id","on");
+
+	}
+		// wait...
+		setTimeout(turn4off,4000);
+
+		function turn4off() {
+		document.getElementsByClassName("box4")[0].removeAttribute("id");
+	}
+		console.log("BOX 4 STUFF!!!");
+}
 }
 };
 
