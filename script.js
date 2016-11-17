@@ -48,14 +48,14 @@ var funcLoop = function(useArray) {
 	for (i=0; i<useArray.length; i++) {
 
 	if (useArray[i]%2 ===0) {
-
-		document.getElementsByClassName("box2")[0].setAttribute("id","on");
+// pick-up here: added setInterval and setTimeout, 3000 to working document function to test
+		setInterval(document.getElementsByClassName("box2")[0].setAttribute("id","on"),3000);
 		// wait...
-		// off
+		document.getElementsByClassName("box2")[0].removeAttribute("id");
 		// wait...
 		console.log("BOX 2 STUFF!!!");
 	} else if (useArray[i]%2===1) {
-		document.getElementsByClassName("box1")[0].setAttribute("id","on");
+		setTimeout(document.getElementsByClassName("box1")[0].setAttribute("id","on"),3000);
 		console.log("BOX 1 STUFF!!!");
 	}
 }
