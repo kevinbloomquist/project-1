@@ -3,6 +3,11 @@
 .box{
 
 }
+#test {
+	width:100px;
+	height:100px;
+	background:yellow;
+}
 
 /*individual box CSS for control*/
 
