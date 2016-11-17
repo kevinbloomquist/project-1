@@ -7,13 +7,13 @@ $( document ).ready(function() {
 });
 
 // generate a random even or odd value
-var randomNum = Math.floor(Math.random()*(3-1) +1);
-console.log(randomNum);
+var randomNum = Math.floor(Math.random()*(5-1) +1);
+console.log("random number " +randomNum);
 
 
 // generate arrays for use in the functionality of game stages
 var callArray = [];
-console.log("callArray "+callArray);
+console.log("callArray "+ callArray);
 
 var useArray = [];
 console.log("useArray " + useArray);
@@ -30,9 +30,10 @@ console.log(grabBox2);
 var extendArray = function(callArray) {
 	
 console.log(callArray);
-var randomNum = Math.floor(Math.random()*(3-1) +1);
+var randomNum = Math.floor(Math.random()*(5-1) +1);
 callArray.push(randomNum);
 useArray = callArray;
+
 
 console.log("useArray " + useArray);
 
@@ -43,9 +44,12 @@ extendArray(callArray);
 console.log("UseArray "+useArray);
 
 // create loop to manage display CSS vaues
+var runVar = useArray.pop();
 
-// turnon
-// turn off
+console.log(runVar);
+
+// turnon...
+// turn off...
 
 var funcLoop = function(useArray) {
 	for (i=0; i<useArray.length; i++) {
