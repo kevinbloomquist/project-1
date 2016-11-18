@@ -26,7 +26,7 @@ var grabBox2 = document.getElementsByClassName("box2");
 console.log(grabBox2); 
 
 
-
+// Function to extend the current random array by 1 new random number 1-4) -> saves to useArray
 var extendArray = function(callArray) {
 	
 console.log(callArray);
@@ -43,7 +43,7 @@ console.log("useArray " + useArray);
 extendArray(callArray);
 console.log("UseArray "+useArray);
 
-// create loop to manage display CSS vaues
+// create functions to manage display CSS vaues
 
 // turnon...
 // turn off...
@@ -201,7 +201,16 @@ var funcLoop = function(useArray) {
 };
 *********************************************************************working for loop quarantine above*/
 
-
-
+// addEventListener to divs
+var mark = function(b) {
+	console.log("clicked" + b);
+};
+document.getElementsByClassName("box1")[0].addEventListener("click",function(){mark(1);});
+document.getElementsByClassName("box2")[0].addEventListener("click",function(){mark(2);});
+document.getElementsByClassName("box3")[0].addEventListener("click",function(){mark(3);});
+document.getElementsByClassName("box4")[0].addEventListener("click",function(){mark(4);});
+// Capture user input and compare to useArray
+// Alert win/lose modal
+// run extendArray and funcLoop for next round
 
 
