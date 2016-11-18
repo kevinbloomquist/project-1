@@ -18,6 +18,9 @@ console.log("callArray "+ callArray);
 var useArray = [];
 console.log("useArray " + useArray);
 
+var compareArray = [];
+console.log("compareArray "+ compareArray);
+
 // generate vars for easy DOM manipulation
 var grabBox1 = document.getElementsByClassName("box1");
 console.log(grabBox1); 
@@ -207,15 +210,28 @@ var responseArray = [];
 var mark = function(b) {
 	console.log("clicked" + b);
 };
-document.getElementsByClassName("box1")[0].addEventListener("click",function(){responseArray.push(1);console.log(responseArray);});
+document.getElementsByClassName("box1")[0].addEventListener("click",function(){responseArray.push(1);mark(responseArray);});
 console.log(responseArray);
-document.getElementsByClassName("box2")[0].addEventListener("click",function(){responseArray.push(2);console.log(responseArray);});
+document.getElementsByClassName("box2")[0].addEventListener("click",function(){responseArray.push(2);mark(responseArray);});
 console.log(responseArray);
-document.getElementsByClassName("box3")[0].addEventListener("click",function(){responseArray.push(3);console.log(responseArray);});
+document.getElementsByClassName("box3")[0].addEventListener("click",function(){responseArray.push(3);mark(responseArray);});
 console.log(responseArray);
-document.getElementsByClassName("box4")[0].addEventListener("click",function(){responseArray.push(4);console.log(responseArray);});
+document.getElementsByClassName("box4")[0].addEventListener("click",function(){responseArray.push(4);mark(responseArray);});
 console.log(responseArray);
-// Capture user input and compare to useArray************************************************************
+// compare to useArray************************************************************
+// jettison useArray[0] before comparing to responseArray
+var compareArray = useArray.shift();
+console.log("compareArray "+ compareArray);
+
+var checkWin = function() {
+useArray.shift();
+if (_.isequal(responseArray,useArray)===true) {
+// alert modal-> run extendArray-> run SetTimer(funcLoop,2000) or wait for spacebar funcLoop
+alert("correct!");
+} else {
+	alert("beat it nerd!");
+}
+};
 
 // Alert win/lose modal
 // run extendArray and funcLoop for next round
