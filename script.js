@@ -223,9 +223,12 @@ console.log(responseArray);
 var compareArray = useArray.shift();
 console.log("compareArray "+ compareArray);
 
+var compare = _.isEqual(responseArray,useArray);
+console.log("compare is "+ compare);
+
 var checkWin = function() {
 useArray.shift();
-if (_.isequal(responseArray,useArray)===true) {
+if (compare ===true) {
 // alert modal-> run extendArray-> run SetTimer(funcLoop,2000) or wait for spacebar funcLoop
 alert("correct!");
 } else {
