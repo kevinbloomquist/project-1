@@ -88,37 +88,40 @@ function turn4off() {
 var funcLoop = function(useArray) {
 
 	for (i=0; i<useArray.length; i++) {
-		switch (useArray[i]) {
-		    
-		    case 1:
-		    	setTimeout(turn1on,1000);
-		        turn1on();
-		        setTimeout(turn1off,3000);
-		        turn1off();
-		        console.log("BOX 1 STUFF!!!");
-		        break;
-		    case 2:
-		    	setTimeout(turn2on,2000);
-		        turn2on();
-		        setTimeout(turn2off,4000);
-		        turn2off();
-		        console.log("BOX 2 STUFF!!!");
-		        break;
-		    case 3:
-		    	setTimeout(turn3on,3000);
-		    	turn3on();
-		    	setTimeout(turn3off,6000);
-		        turn3off();
-		        console.log("BOX 3 STUFF!!!");
-		        break;
-		    case 4:
-		    	setTimeout(turn4on,4000);
-		        turn4on();
-		        setTimeout(turn4off,8000);
-		        turn4off();
-		        console.log("BOX 4 STUFF!!!");
-		        break;
-		}
+	
+	
+			switch (useArray[i]) {
+			    
+			    case 1:
+			    	setTimeout(turn1on,1000);
+			        turn1on();
+			        setTimeout(turn1off,2000);
+			        turn1off();
+			        console.log("BOX 1 STUFF!!!");
+			        break;
+			    case 2:
+			    	setTimeout(turn2on,1000);
+			        turn2on();
+			        setTimeout(turn2off,2000);
+			        turn2off();
+			        console.log("BOX 2 STUFF!!!");
+			        break;
+			    case 3:
+			    	setTimeout(turn3on,1000);
+			    	turn3on();
+			    	setTimeout(turn3off,2000);
+			        turn3off();
+			        console.log("BOX 3 STUFF!!!");
+			        break;
+			    case 4:
+			    	setTimeout(turn4on,1000);
+			        turn4on();
+			        setTimeout(turn4off,2000);
+			        turn4off();
+			        console.log("BOX 4 STUFF!!!");
+			        break;
+			}
+		
   	}
 };
 

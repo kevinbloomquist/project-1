@@ -16,6 +16,7 @@
 	width:100px;
 	height:100px;
 	background:red;
+	border-radius:30px;
 	display:inline-block;
 }
 
@@ -24,7 +25,9 @@
 	width:100px;
 	height:100px;
 	background:blue;
+	border-radius:30px;
 	display:inline-block;
+
 }
 
 .box3{
@@ -32,6 +35,7 @@
 	width:100px;
 	height:100px;
 	background:green;
+	border-radius:30px;
 	display:inline-block;
 }
 
@@ -40,6 +44,7 @@
 	width:100px;
 	height:100px;
 	background:purple;
+	border-radius:30px;
 	display:inline-block;
 }
 
