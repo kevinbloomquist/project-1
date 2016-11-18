@@ -15,7 +15,7 @@
 	color:white;
 	width:100px;
 	height:100px;
-	background:red;
+	background:rgba(255,0,0,.6);
 	border-radius:30px;
 	display:inline-block;
 }
@@ -24,7 +24,7 @@
 	color:white;
 	width:100px;
 	height:100px;
-	background:blue;
+	background:rgba(0,255,0,.6);
 	border-radius:30px;
 	display:inline-block;
 
@@ -34,7 +34,7 @@
 	color:white;
 	width:100px;
 	height:100px;
-	background:green;
+	background:rgba(0,0,255,.7);
 	border-radius:30px;
 	display:inline-block;
 }
@@ -43,7 +43,7 @@
 	color:white;
 	width:100px;
 	height:100px;
-	background:purple;
+	background:rgba(255,0,255,.7);
 	border-radius:30px;
 	display:inline-block;
 }

@@ -85,38 +85,40 @@ function turn4on() {
 function turn4off() {
 		document.getElementsByClassName("box4")[0].removeAttribute("id");
 	}
-var funcLoop = function(useArray) {
 
-	for (i=0; i<useArray.length; i++) {
+// function to loop through useArray sequence. Each iteration chooses a box and "turns it on...then off"
+var funcLoop = function(useArray) {
+// loop will throw away first value to avoid case i=0 which negates time interval on first integer.
+	for (i=1; i<useArray.length; i++) {
 	
 	
 			switch (useArray[i]) {
 			    
 			    case 1:
-			    	setTimeout(turn1on,1000);
+			    	setTimeout(turn1on,(1000*i)+500);
 			        turn1on();
-			        setTimeout(turn1off,2000);
+			        setTimeout(turn1off,(1000*i)+1000);
 			        turn1off();
 			        console.log("BOX 1 STUFF!!!");
 			        break;
 			    case 2:
-			    	setTimeout(turn2on,1000);
+			    	setTimeout(turn2on,(1000*i)+500);
 			        turn2on();
-			        setTimeout(turn2off,2000);
+			        setTimeout(turn2off,(1000*i)+1000);
 			        turn2off();
 			        console.log("BOX 2 STUFF!!!");
 			        break;
 			    case 3:
-			    	setTimeout(turn3on,1000);
+			    	setTimeout(turn3on,(1000*i)+500);
 			    	turn3on();
-			    	setTimeout(turn3off,2000);
+			    	setTimeout(turn3off,(1000*i)+1000);
 			        turn3off();
 			        console.log("BOX 3 STUFF!!!");
 			        break;
 			    case 4:
-			    	setTimeout(turn4on,1000);
+			    	setTimeout(turn4on,(1000*i)+500);
 			        turn4on();
-			        setTimeout(turn4off,2000);
+			        setTimeout(turn4off,(1000*i)+1000);
 			        turn4off();
 			        console.log("BOX 4 STUFF!!!");
 			        break;
