@@ -48,18 +48,87 @@ console.log("UseArray "+useArray);
 // turnon...
 // turn off...
 
+//***************************************start switch/ case approach here
+
+function turn1on() {
+		document.getElementsByClassName("box1")[0].setAttribute("id","on");
+
+	}
+
+function turn1off() {
+		document.getElementsByClassName("box1")[0].removeAttribute("id");
+	}
+
+function turn2on() {
+		document.getElementsByClassName("box2")[0].setAttribute("id","on");
+
+	}
+
+function turn2off() {
+		document.getElementsByClassName("box2")[0].removeAttribute("id");
+	}
+
+function turn3on() {
+		document.getElementsByClassName("box3")[0].setAttribute("id","on");
+
+	}
+
+function turn3off() {
+		document.getElementsByClassName("box3")[0].removeAttribute("id");
+	}
+
+function turn4on() {
+		document.getElementsByClassName("box4")[0].setAttribute("id","on");
+
+	}
+
+function turn4off() {
+		document.getElementsByClassName("box4")[0].removeAttribute("id");
+	}
+var funcLoop = function(useArray) {
+
+	for (i=0; i<useArray.length; i++) {
+		switch (useArray[i]) {
+		    
+		    case 1:
+		    	setTimeout(turn1on,1000);
+		        turn1on();
+		        setTimeout(turn1off,3000);
+		        turn1off();
+		        console.log("BOX 1 STUFF!!!");
+		        break;
+		    case 2:
+		    	setTimeout(turn2on,2000);
+		        turn2on();
+		        setTimeout(turn2off,4000);
+		        turn2off();
+		        console.log("BOX 2 STUFF!!!");
+		        break;
+		    case 3:
+		    	setTimeout(turn3on,3000);
+		    	turn3on();
+		    	setTimeout(turn3off,6000);
+		        turn3off();
+		        console.log("BOX 3 STUFF!!!");
+		        break;
+		    case 4:
+		    	setTimeout(turn4on,4000);
+		        turn4on();
+		        setTimeout(turn4off,8000);
+		        turn4off();
+		        console.log("BOX 4 STUFF!!!");
+		        break;
+		}
+  	}
+};
+
+
+// pick-up here: added setTimeout, on and off work. offset timers to better understand...delay coordination is off trying switch context*/
+
+/*********************************************************************************Working for loop quarantine below
 var funcLoop = function(useArray) {
 	for (i=0; i<useArray.length; i++) {
 	if (useArray[i] ===2) {
-// ************************************************************remove below
-
-		/*setTimeout(myFunction,3000);
-
-		function myFunction() {
-    	alert('Hello');
-	}*/
-// *************************************************************remove above
-// pick-up here: added setTimeout, on and off work. offset timers to better understand...delay coordination is off
 		setTimeout(turn2on,2000);
 
 		function turn2on() {
@@ -125,7 +194,7 @@ var funcLoop = function(useArray) {
 }
 }
 };
-
+*********************************************************************working for loop quarantine above*/
 
 
 
