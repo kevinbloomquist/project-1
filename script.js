@@ -219,24 +219,27 @@ console.log(responseArray);
 document.getElementsByClassName("box4")[0].addEventListener("click",function(){responseArray.push(4);mark(responseArray);});
 console.log(responseArray);
 // compare to useArray************************************************************
-// jettison useArray[0] before comparing to responseArray
-var compareArray = useArray.shift();
-console.log("compareArray "+ compareArray);
+
+// used underscore.js to compare arrays in checkWin function
 
 var compare = _.isEqual(responseArray,useArray);
 console.log("compare is "+ compare);
 
 var checkWin = function() {
-useArray.shift();
+// jettison useArray[0] before comparing to responseArray
+useArray.shift(); //need a solution (maybe something in callArr/useArray cycle) for this you need to pop for comparison inside this function but outside useArray has to remain intact.
+var compare = _.isEqual(responseArray,useArray);
 if (compare ===true) {
-// alert modal-> run extendArray-> run SetTimer(funcLoop,2000) or wait for spacebar funcLoop
+// Alert win/lose----> change to modal
 alert("correct!");
 } else {
 	alert("beat it nerd!");
 }
+responseArray = [];
 };
 
-// Alert win/lose modal
+// transition to next round: clear responseArray/ run extendArray/ run funcLoop and compare new response.
+// build notice or div using "round" i. 
 // run extendArray and funcLoop for next round
 
 
