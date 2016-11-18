@@ -201,15 +201,22 @@ var funcLoop = function(useArray) {
 };
 *********************************************************************working for loop quarantine above*/
 
-// addEventListener to divs
+// addEventListener to divs****************************************************************************
+var responseArray = [];
+// diagnostic function
 var mark = function(b) {
 	console.log("clicked" + b);
 };
-document.getElementsByClassName("box1")[0].addEventListener("click",function(){mark(1);});
-document.getElementsByClassName("box2")[0].addEventListener("click",function(){mark(2);});
-document.getElementsByClassName("box3")[0].addEventListener("click",function(){mark(3);});
-document.getElementsByClassName("box4")[0].addEventListener("click",function(){mark(4);});
-// Capture user input and compare to useArray
+document.getElementsByClassName("box1")[0].addEventListener("click",function(){responseArray.push(1);console.log(responseArray);});
+console.log(responseArray);
+document.getElementsByClassName("box2")[0].addEventListener("click",function(){responseArray.push(2);console.log(responseArray);});
+console.log(responseArray);
+document.getElementsByClassName("box3")[0].addEventListener("click",function(){responseArray.push(3);console.log(responseArray);});
+console.log(responseArray);
+document.getElementsByClassName("box4")[0].addEventListener("click",function(){responseArray.push(4);console.log(responseArray);});
+console.log(responseArray);
+// Capture user input and compare to useArray************************************************************
+
 // Alert win/lose modal
 // run extendArray and funcLoop for next round
 
