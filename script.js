@@ -210,25 +210,55 @@ var responseArray = [];
 var mark = function(b) {
 	console.log("clicked" + b);
 };
-document.getElementsByClassName("box1")[0].addEventListener("click",function(){responseArray.push(1);mark(responseArray);});
+
+// need to make visual response to user click
+document.getElementsByClassName("box1")[0].addEventListener("click",function(){
+	responseArray.push(1);
+	mark(responseArray);
+	turn1on();
+	setTimeout(turn1off,250);
+
+});
 console.log(responseArray);
-document.getElementsByClassName("box2")[0].addEventListener("click",function(){responseArray.push(2);mark(responseArray);});
+
+document.getElementsByClassName("box2")[0].addEventListener("click",function(){
+	responseArray.push(2);
+	mark(responseArray);
+	turn2on();
+	setTimeout(turn2off,250);
+});
 console.log(responseArray);
-document.getElementsByClassName("box3")[0].addEventListener("click",function(){responseArray.push(3);mark(responseArray);});
+
+document.getElementsByClassName("box3")[0].addEventListener("click",function(){
+	responseArray.push(3);
+	mark(responseArray);
+	turn3on();
+	setTimeout(turn3off,250);
+});
 console.log(responseArray);
-document.getElementsByClassName("box4")[0].addEventListener("click",function(){responseArray.push(4);mark(responseArray);});
+
+document.getElementsByClassName("box4")[0].addEventListener("click",function(){
+	responseArray.push(4);
+	mark(responseArray);
+	turn4on();
+	setTimeout(turn4off,250);
+});
 console.log(responseArray);
 // compare to useArray************************************************************
 
 // used underscore.js to compare arrays in checkWin function
 
-var compare = _.isEqual(responseArray,useArray);
+var compare = _.isEqual(responseArray,shiftDecoy);
 console.log("compare is "+ compare);
+// dummy variable so useArray stays in tact across rounds.
+var shiftDecoy = useArray;
 
 var checkWin = function() {
-// jettison useArray[0] before comparing to responseArray
-useArray.shift(); //need a solution (maybe something in callArr/useArray cycle) for this you need to pop for comparison inside this function but outside useArray has to remain intact.
-var compare = _.isEqual(responseArray,useArray);
+// jettison shiftDecoy[0] before comparing to responseArray
+
+
+shiftDecoy.shift(); //need a solution (maybe something in callArr/useArray cycle) for this you need to pop for comparison inside this function but outside useArray has to remain intact.
+var compare = _.isEqual(responseArray,shiftDecoy);
 if (compare ===true) {
 // Alert win/lose----> change to modal
 alert("correct!");
