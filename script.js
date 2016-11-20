@@ -255,9 +255,8 @@ var shiftDecoy = useArray;
 
 var checkWin = function() {
 // jettison shiftDecoy[0] before comparing to responseArray
-
-
 shiftDecoy.shift(); //need a solution (maybe something in callArr/useArray cycle) for this you need to pop for comparison inside this function but outside useArray has to remain intact.
+
 var compare = _.isEqual(responseArray,shiftDecoy);
 if (compare ===true) {
 // Alert win/lose----> change to modal
@@ -274,6 +273,8 @@ roundNum++;
 };
 
 
+// go will run extendArray run funcLoop and change round.
+// transition to next round: clear responseArray/ run extendArray/ run funcLoop and change round number
 document.getElementsByClassName("start")[0].addEventListener("click",function(){
 responseArray = [];
 extendArray(useArray);
@@ -283,9 +284,8 @@ document.getElementsByClassName("roundBox")[0].innerHTML="ROUND " + roundNum;
 	});
 
 
-// transition to next round: clear responseArray/ run extendArray/ run funcLoop and change round number
 // when response.length = shiftDecoy.length -> run check win
-// ->trigger modal response (user closes) ten clicks go!
-// go will run extendArray run funcLoop and change round.
+// ->trigger modal response (user closes) ten clicks go! (change alerts)
+// Scoring metric: background color -> each round passes will add to rgba values
 
 
