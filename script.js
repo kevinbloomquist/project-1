@@ -280,6 +280,7 @@ responseArray = [];
 extendArray(useArray);
 funcLoop(useArray);
 roundAdvance();
+colorFunc();
 document.getElementsByClassName("roundBox")[0].innerHTML="ROUND " + roundNum;
 	});
 
@@ -287,5 +288,15 @@ document.getElementsByClassName("roundBox")[0].innerHTML="ROUND " + roundNum;
 // when response.length = shiftDecoy.length -> run check win
 // ->trigger modal response (user closes) ten clicks go! (change alerts)
 // Scoring metric: background color -> each round passes will add to rgba values
+var n = 265;
+// made variables for easy expansion of functionality later
+var redVal = 255;
+var greenVal = 255;
+var blueVal = 255;
 
+var colorFunc = function() {
+	n-=10;
+	document.body.style.backgroundColor = "rgba("+n+"," +n+","+n+", 0.8)";
+
+};
 
