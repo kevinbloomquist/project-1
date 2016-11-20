@@ -267,10 +267,19 @@ alert("correct!");
 }
 };
 
+// variable and advance function for round display
+var roundNum = 0;
+var roundAdvance = function() {
+roundNum++;
+};
+
+
 document.getElementsByClassName("start")[0].addEventListener("click",function(){
 responseArray = [];
 extendArray(useArray);
 funcLoop(useArray);
+roundAdvance();
+document.getElementsByClassName("roundBox")[0].innerHTML="ROUND " + roundNum;
 	});
 
 
