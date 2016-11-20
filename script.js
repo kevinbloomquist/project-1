@@ -265,11 +265,18 @@ alert("correct!");
 } else {
 	alert("beat it nerd!");
 }
-responseArray = [];
 };
 
-// transition to next round: clear responseArray/ run extendArray/ run funcLoop and compare new response.
-// build notice or div using "round" i. 
-// run extendArray and funcLoop for next round
+document.getElementsByClassName("start")[0].addEventListener("click",function(){
+responseArray = [];
+extendArray(useArray);
+funcLoop(useArray);
+	});
+
+
+// transition to next round: clear responseArray/ run extendArray/ run funcLoop and change round number
+// when response.length = shiftDecoy.length -> run check win
+// ->trigger modal response (user closes) ten clicks go!
+// go will run extendArray run funcLoop and change round.
 
 
