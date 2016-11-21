@@ -51,7 +51,7 @@ console.log("UseArray "+useArray);
 
 
 //***************************************start switch/ case approach here:
-// create functions to manage display CSS vaues
+// create functions to manage box display CSS vaues
 
 // turnon...
 // turn off...
@@ -93,6 +93,7 @@ function turn4off() {
 
 // function to loop through useArray sequence. Each iteration chooses a box and "turns it on...then off"
 var funcLoop = function(useArray) {
+
 // loop will throw away first value to avoid case i=0 which negates time interval on first integer.
 	for (i=1; i<useArray.length; i++) {
 	
@@ -134,19 +135,23 @@ var funcLoop = function(useArray) {
 
 
 
-// addEventListener to divs****************************************************************************
 var responseArray = [0];
 // diagnostic function
 var mark = function(b) {
 	console.log("clicked" + b);
+	
+var audio = document.getElementById("#tone");
 };
 
-//visual response to user click
+// addEventListener to divs****************************************************************************
+//audio/visual response to user click
 document.getElementsByClassName("box1")[0].addEventListener("click",function(){
 	responseArray.push(1);
 	mark(responseArray);
 	turn1on();
 	setTimeout(turn1off,250);
+	document.getElementById("tone").play();
+
 
 });
 console.log(responseArray);
@@ -156,6 +161,7 @@ document.getElementsByClassName("box2")[0].addEventListener("click",function(){
 	mark(responseArray);
 	turn2on();
 	setTimeout(turn2off,250);
+	document.getElementById("tone").play();
 });
 console.log(responseArray);
 
@@ -164,6 +170,7 @@ document.getElementsByClassName("box3")[0].addEventListener("click",function(){
 	mark(responseArray);
 	turn3on();
 	setTimeout(turn3off,250);
+	document.getElementById("tone").play();
 });
 console.log(responseArray);
 
@@ -172,6 +179,7 @@ document.getElementsByClassName("box4")[0].addEventListener("click",function(){
 	mark(responseArray);
 	turn4on();
 	setTimeout(turn4off,250);
+	document.getElementById("tone").play();
 });
 console.log(responseArray);
 // compare to useArray************************************************************
@@ -185,21 +193,25 @@ console.log("compare is "+ compare);
 
 var shiftDecoy = useArray;
 
-// going to attempt to attach shiftBridge call to landing page button
-
-while (responseArray.length === useArray.length) {
-	console.log("check!");
+var checkLength = function(){
+if (responseArray.length === useArray.length) {
+	checkWin();
 }
+};
+var Interval;
 // *******************************************working above on solution to recognize check conditions->to 192 quarantine
 var checkWin = function() {
-// jettison shiftDecoy[0] before comparing to responseArray
 
 var compare = _.isEqual(responseArray,useArray);
 	if (compare ===true) {
 		// Alert win/lose----> change to modal
 		alert("CORRECT!");
+		clearInterval(Interval);
+
 	}else {
 		alert("BETTER LUCK NEXT TIME!");
+		clearInterval(Interval);
+
 	}
 };
 
@@ -212,27 +224,29 @@ roundNum++;
 
 // go will run extendArray run funcLoop and change round.
 // transition to next round: clear responseArray/ run extendArray/ run funcLoop and change round number
-document.getElementsByClassName("start")[0].addEventListener("click",function(){
+document.getElementsByClassName("go")[0].addEventListener("click",function(){
 	responseArray = [0];
 	extendArray(useArray);
 	funcLoop(useArray);
 	roundAdvance();
 	colorFunc();
 	document.getElementsByClassName("roundBox")[0].innerHTML="ROUND " + roundNum;
+	Interval = setInterval(function(){checkLength();},1000);
+
 
 });
 
 
-// when response.length = shiftDecoy.length -> run check win
+// when response.length == shiftDecoy.length -> run check win
 // ->trigger modal response (user closes) ten clicks go! (change alerts)
-// Scoring metric: background color -> each round passes will add to rgba values
 // stretch-> the color of each box slowly transitions to it's compliment for added difficulty
 var n = 265;
-// made variables for easy expansion of functionality later
+// made variables for easy expansion of color functionality later
 var redVal = 255;
 var greenVal = 255;
 var blueVal = 255;
 
+// Scoring metric: background color -> each round passes will add to rgba values
 var colorFunc = function() {
 	n-=10;
 	document.body.style.backgroundColor = "rgba("+n+"," +n+","+n+", 0.8)";
