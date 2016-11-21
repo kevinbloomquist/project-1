@@ -12,14 +12,14 @@ console.log("random number " +randomNum);
 
 
 // generate arrays for use in the functionality of game stages
-var callArray = [1];
+var callArray = [0];
 console.log("callArray "+ callArray);
 
-var useArray = [1];
+var useArray = [0];
 console.log("useArray " + useArray);
 
 
-var compareArray = [];
+var compareArray = [0];
 console.log("compareArray "+ compareArray);
 
 // generate vars for easy DOM manipulation
@@ -135,7 +135,7 @@ var funcLoop = function(useArray) {
 
 
 // addEventListener to divs****************************************************************************
-var responseArray = [1];
+var responseArray = [0];
 // diagnostic function
 var mark = function(b) {
 	console.log("clicked" + b);
@@ -178,27 +178,28 @@ console.log(responseArray);
 
 // used underscore.js to compare arrays in checkWin function
 
-var compare = _.isEqual(responseArray,shiftDecoy);
+var compare = _.isEqual(responseArray,useArray);
 console.log("compare is "+ compare);
+
 // dummy variable so useArray stays in tact across rounds.
 
 var shiftDecoy = useArray;
 
 // going to attempt to attach shiftBridge call to landing page button
 
-while (responseArray.length == shiftDecoy.length && responseArray.length>1) {
+while (responseArray.length === useArray.length) {
 	console.log("check!");
 }
 // *******************************************working above on solution to recognize check conditions->to 192 quarantine
 var checkWin = function() {
 // jettison shiftDecoy[0] before comparing to responseArray
 
-var compare = _.isEqual(responseArray,shiftDecoy);
+var compare = _.isEqual(responseArray,useArray);
 	if (compare ===true) {
 		// Alert win/lose----> change to modal
-		alert("correct!");
+		alert("CORRECT!");
 	}else {
-		alert("beat it nerd!");
+		alert("BETTER LUCK NEXT TIME!");
 	}
 };
 
@@ -212,7 +213,7 @@ roundNum++;
 // go will run extendArray run funcLoop and change round.
 // transition to next round: clear responseArray/ run extendArray/ run funcLoop and change round number
 document.getElementsByClassName("start")[0].addEventListener("click",function(){
-	responseArray = [1];
+	responseArray = [0];
 	extendArray(useArray);
 	funcLoop(useArray);
 	roundAdvance();
