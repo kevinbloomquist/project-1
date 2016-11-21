@@ -13,19 +13,23 @@
 
 
 
+Hello!
+
+	Thank you for playing "SIMPLE SIMON". Below is a living document describing the assignment, approaches to and reflections on the process as I worked through the project, problems as yet unsolved, and  some working ideas for future versions. Your feedback is welcome and would be very much appreciated so please feel free to reach out.
+
+	Have fun!
+
+	-K
 
 
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: The Game
+
+
+#Project #1: The Game
 
 ### Overview
 
 Let's start out with something fun - **a game!**
-
-Everyone will get a chance to **be creative**, and work through some really **tough programming challenges** – since you've already gotten your feet wet with Tic Tac Toe, it's up to you to come up with a fun and interesting game to build.
-
-**You will be working individually for this project**, but we'll be guiding you along the process and helping as you go. Show us what you've got!
-
 
 ---
 
@@ -53,24 +57,23 @@ Your app must:
 
 ---
 
-### Suggested Ways to Get Started
+### Approaches and Reflections
 
-* **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually. Use whiteboards!
-* **Use your Development Tools** (console.log, inspector, alert statements, etc) to debug and solve problems
-* Work through the lessons in class & ask questions when you need to! Think about adding relevant code to your game each night, instead of, you know... _procrastinating_.
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
-* **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
-* **Don’t be afraid to write code that you know you will have to remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the game is over but you haven’t solved the win/lose game logic, you can create a button to simulate that until then.
+The project is written mainly using HTML, CSS, and Javascript. you'l notice a little Underscore JS and JQuery sprinkled in, either as a shortcut or as a workaround to a problem.
 
----
+Major takeaways/Concepts so far:
+- Breadcrumbs!!! I appreciated the utility of console.logging before this project but through this process I really refined the art of logging and gained a better understanding of exactly where to place and how to label the log to best express what is happening in the document flow.
 
-### Potential Project Ideas
+- Noticed meta-patterns in workflow, style, and problem solving rituals.
 
-##### Blackjack
-Make a one player game where people down on their luck can lose all their money by guessing which card the computer will deal next!
+- 
 
-##### Self-scoring Trivia
-Test your wits & knowledge with whatever-the-heck you know about (so you can actually win). Guess answers, have the computer tell you how right you are!
+This project is great for:
+- Working with and comparing Arrays
+- Understanding timers and document flow
+- Working with random values
+- 
+
 
 ---
 
