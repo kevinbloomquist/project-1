@@ -61,18 +61,41 @@ Your app must:
 
 The project is written mainly using HTML, CSS, and Javascript. you'l notice a little Underscore JS and JQuery sprinkled in, either as a shortcut or as a workaround to a problem.
 
-Major takeaways/Concepts so far:
+I wanted to make a game that felt clean, familiar yet new, and simple. I wanted it to have a comfortable yet challenging feel. I also wanted it to have functionality that you were drawn to and want to interact with.
+I also wanted to explore alternative progress metrics (in this first version that takes the form of background color).
+
+The backbone of the game is based largely on the generation of a random array of values 1-4. Each value steers a switch to trigger CSS changes in html divs that constitute the game board. Once the sequence has ended the player can then try to emulate the sequence which generates a response array. When the length of the response array equals that of the sequence array (useArray) the two are compared for accuracy and the player is alerted of his/her success. Then the sequence is extended by one more random number and the cycle repeats.
+
+* challenge climax: Timing/ timer issues.
+
+*Major takeaways/Concepts so far:
+
 - Breadcrumbs!!! I appreciated the utility of console.logging before this project but through this process I really refined the art of logging and gained a better understanding of exactly where to place and how to label the log to best express what is happening in the document flow.
 
 - Noticed meta-patterns in workflow, style, and problem solving rituals.
+i.e. Quarantine/block technique
 
-- 
+- Document flow and scope (more detailed understanding)
 
-This project is great for:
+*This project is great for:
 - Working with and comparing Arrays
 - Understanding timers and document flow
 - Working with random values
-- 
+
+*Current working through/hope to add:
+
+Style:
+- Change alerts to modals
+- Animations/ ctx landing (opening sequence) and index (round change bullet line)
+- funesse color pallete
+- ability to change themes
+
+Function:
+- Add multiple players
+- box color complement transitions (difficulty)
+
+Organization:
+- clean up and DRY code out
 
 
 ---
