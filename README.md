@@ -23,7 +23,7 @@ Hello!
 
 
 
-https://kevinbloomquist.github.io/project-1.html
+https://kevinbloomquist.github.io/project-1/index.html
 
 #Project #1: The Game
 
