@@ -192,28 +192,44 @@ console.log("compare is "+ compare);
 // dummy variable so useArray stays in tact across rounds.
 
 var shiftDecoy = useArray;
+// ****build modal functionality below************************************************************************
+var modalCheck = document.getElementById('modalCheck');
+var modalWrong = document.getElementById('modalWrong');
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+// When the user clicks on <span> (x), close the modal
+document.getElementsByClassName("close")[0].addEventListener("click", function() {
+    modalCheck.style.display = "none";
+});
+
+document.getElementsByClassName("close2")[0].addEventListener("click", function() {
+    modalWrong.style.display = "none";
+});
+// ****build modal functionality above************************************************************************
 
 var checkLength = function(){
 if (responseArray.length === useArray.length) {
 	checkWin();
 }
 };
+// create specific Interval variable to be referenced by clearInterval below (Specific stop watch analogy)*
 var Interval;
-// *******************************************working above on solution to recognize check conditions->to 192 quarantine
 var checkWin = function() {
 
 var compare = _.isEqual(responseArray,useArray);
 	if (compare ===true) {
 		// Alert win/lose----> change to modal
-		alert("CORRECT!");
+		modalCheck.style.display = "block";
 		clearInterval(Interval);
 
 	}else {
-		alert("BETTER LUCK NEXT TIME!");
+		modalWrong.style.display = "block";
 		clearInterval(Interval);
 
 	}
 };
+
+
 
 // variable and advance function for round display
 var roundNum = 0;
@@ -222,7 +238,7 @@ roundNum++;
 };
 
 
-// go will run extendArray run funcLoop and change round.
+// 'GO' will run extendArray run funcLoop and change round.
 // transition to next round: clear responseArray/ run extendArray/ run funcLoop and change round number
 document.getElementsByClassName("go")[0].addEventListener("click",function(){
 	responseArray = [0];
