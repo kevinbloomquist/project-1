@@ -264,7 +264,7 @@ var blueVal = 255;
 
 // Scoring metric: background color -> each round passes will add to rgba values
 var colorFunc = function() {
-	n-=10;
+	n-=20;
 	document.body.style.backgroundColor = "rgba("+n+"," +n+","+n+", 0.8)";
 
 };
